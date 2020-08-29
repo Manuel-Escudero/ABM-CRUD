@@ -1,7 +1,7 @@
 <?php
 include('conexionBD.php');
 
-$busqueda=$_POST['buscado'];
+$busqueda=$_POST['buscador'];
 
 if(!empty($busqueda)) {
     $query = "SELECT * FROM tabla_ejemplo where campo1 LIKE '%$busqueda%'  ";

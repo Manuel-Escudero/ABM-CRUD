@@ -7,7 +7,6 @@ $result = mysqli_query($con,$query);
 if(!$result){
     die('falle mi pana!: ' . mysqli_error($con) );
 }else{
-
 $json = array();
 while($row = mysqli_fetch_array($result)) {
     $json[] =array(

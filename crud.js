@@ -11,22 +11,14 @@ $(document).ready(function(){
         $.ajax({
             url: 'tupla-busqueda.php',
             type: 'POST',
-            data:{ buscado },
+            data:{ buscador },
             success: function(respuesta){
                let tuplas = JSON.parse(respuesta);
                let template = '';
                //console.log(tuplas);
                tuplas.forEach(tupla => {
                    //console.log(tupla);
-                   template += `<li>
-                   ${tupla.Nombre}
-                   </li>
-                   <li>
-                   ${tupla.detalle}
-                   </li>
-                   <li>
-                   ${tupla.descripcion}
-                   </li>`;
+                   template += `<li>${tupla.Nombre}</li>`;
                });
  
                $('#contenedor').html(template);
